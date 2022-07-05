@@ -7,3 +7,7 @@ type UserToPaymentLink struct {
 	UserId    string    `json:"user_id"`
 	CreatedAt time.Time `json:"created_at"`
 }
+
+func (p UserToPaymentLink) IsNoSQLEntity() bool {
+	return true
+}
