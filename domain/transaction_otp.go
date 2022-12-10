@@ -9,3 +9,7 @@ type TransactionOtp struct {
 	Used       bool      `json:"used"`
 	ExpiryDate time.Time `json:"expiry_date"`
 }
+
+func (p TransactionOtp) IsNoSQLEntity() bool {
+	return true
+}
